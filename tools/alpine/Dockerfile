@@ -56,7 +56,7 @@ ENV CONTAINERD_REPO=https://github.com/containerd/containerd.git
 ENV CONTAINERD_COMMIT=v1.1.2
 RUN mkdir -p $GOPATH/src/github.com/containerd && \
   cd $GOPATH/src/github.com/containerd && \
-  git clone https://github.com/containerd/containerd.git && \
+  git clone $CONTAINERD_REPO && \
   cd $GOPATH/src/github.com/containerd/containerd && \
   git checkout $CONTAINERD_COMMIT
 RUN apk add --no-cache btrfs-progs-dev gcc libc-dev linux-headers make libseccomp-dev

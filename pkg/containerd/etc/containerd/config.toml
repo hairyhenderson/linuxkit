@@ -9,7 +9,7 @@ disabled_plugins = ["cri"]
 
 [debug]
   address = "/run/containerd/debug.sock"
-  level = "info"
+  level = "debug"
 
 [metrics]
   address = ""
